@@ -1,0 +1,32 @@
+¿Cómo estructurar las carpetas de tu proyecto?
+No importa si usas React, Vue, TypeScript o JavaScript...
+
+Existen diferentes estrategias y opiniones de cómo hacerlo.
+¡Te explico algunas interesantes! ↓
+
+1. Por Tipo
+Esta es la más sencilla y típica. Funciona bien en proyectos pequeños.
+
+Creas una carpeta para cada tipo de archivo: componentes, páginas, servicios, estados, utilidades...
+
+¿Lo malo? Puedes terminar con carpetas con muchos archivos que se hacen difícil de seguir.
+
+2. Por Tipo y Feature
+
+Aquí ya reflejamos la lógica de nuestro negocio en las carpetas. Así que dentro de cada una, indicamos a qué parte de nuestra aplicación se refiere.
+
+Lo bueno es que ya es más fácil de navegar pero repetimos las mismas "features" en cada carpeta.
+
+3. Screaming Architecture
+
+Aquí le damos la vuelta. En lugar de indicar qué usamos, nuestras carpetas indican qué hacemos.
+
+Seguro que muchas veces has entrado a un proyecto y rápidamente te has dado cuenta que usa React pero no tenías ni idea realmente qué hacía.
+
+La idea de esta estructura es darle la vuelta. Simplificar el desarrollo del proyecto y hacer que independientemente de la tecnología, las carpetas nos guíen a lo que nos interesa.
+
+¿Cuál es la mejor?
+Todo depende. Tamaño del proyecto, duración del proyecto...
+Además, siempre puedes empezar por la primera y luego ir migrando poco a poco a otra.
+
+También pueden existir opciones intermedias que mezclen algunos conceptos.
