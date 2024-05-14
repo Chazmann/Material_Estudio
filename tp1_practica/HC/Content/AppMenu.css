@@ -1,0 +1,68 @@
+
+.menuAppDropdown {
+    border-radius: 14px;
+    width: auto !important;
+    overflow: visible;
+    max-height: 300px auto !important;
+    flex-direction: column;
+    box-sizing: border-box !important;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.096);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 1500px 1500px rgba(0, 0, 0, 0.359) !important;
+    z-index: 2000;
+}
+
+.grilla {
+    background-color: rgba(255, 255, 255, 0.729);
+    box-sizing: border-box !important;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0px !important;
+    grid-auto-rows: minmax(60px, auto);
+    place-items: center;
+    overflow-y: scroll;
+    max-height: 300px;
+    overflow-x: hidden;
+    padding: 5px;
+    border-radius: 10px;   
+}
+
+    .grilla .dropdown-item {
+        border-radius: 7px;
+        padding: 6px;
+    }
+
+        .grilla .dropdown-item:hover {
+            background-color: rgba(255, 255, 255, 0.352) !important;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+
+    /*CONTENEDOR SCROLLBAR*/
+    .grilla::-webkit-scrollbar {
+        right: -5px !important;
+        height: 10px;
+        width: 5px;
+        border-radius: 5px;
+    }
+
+    /* FONDO BARRA SCROLL*/
+    .grilla::-webkit-scrollbar-track {
+        background: #f1f1f100;
+    }
+
+    /* SELECTOR */
+    .grilla::-webkit-scrollbar-thumb {
+        background: rgb(81, 81, 81);
+        border-radius: 5px;
+    }
+
+        /* SELECTOR hover */
+        .grilla::-webkit-scrollbar-thumb:hover {
+            background: rgb(124, 124, 124);
+            
+        }
+
+

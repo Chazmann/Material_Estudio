@@ -1,0 +1,96 @@
+﻿body header {
+  font-family: 'Open Sans', sans-serif;
+  font-size:12px!important;
+  /*line-height:0px!important*/
+}
+
+#navigation {
+    padding-top: 50px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+
+.modal-lg {
+    max-width: 80% !important;
+}
+
+.modal-md {
+    max-width: 60% !important;
+}
+
+.disabled-select {
+    pointer-events: none !important;
+}
+
+.nav-markey .nav-link {
+    font-size: 1rem!important
+}
+
+.modal .modal-header {
+    background-color:#0094ff;
+}
+.modal .modal-title {
+    color: #fff;
+}
+
+
+.dataTables_wrapper {
+    padding-left:0px!important;
+    padding-right:0px!important
+
+}
+.table thead th {
+    border-top: 0px !important
+}
+
+.table .tableDT thead th {
+    border-bottom: 0px !important;
+    border-top: 0px !important
+}
+
+
+.logo {
+    display: block;
+    max-width: 200px;
+    max-height: 40px;
+}
+
+.logo-login  {
+    margin: 0 auto;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.firma-medico {
+    max-width: 200px;
+    max-height: 50px;
+}
+
+.text-huge {
+    font-size:30px!important
+}
+
+@media (min-width: 1260px) {
+    .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+        .navbar-expand-custom .navbar-nav {
+            flex-direction: row;
+        }
+
+            .navbar-expand-custom .navbar-nav .nav-link {
+                padding-right: .5rem;
+                padding-left: .5rem;
+            }
+
+        .navbar-expand-custom .navbar-collapse {
+            display: flex !important;
+        }
+
+        .navbar-expand-custom .navbar-toggler {
+            display: none;
+        }
+}

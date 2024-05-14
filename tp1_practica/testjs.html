@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugando con el Js DOM</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="material-icons.css">
+    <link rel="stylesheet" href="stail.css">
+</head>
+
+<body>
+    <header id="head">
+        <span>ENCABEZADO</span>
+    </header>
+    <main>
+        <div class="flex fwrap">
+            <section id="nro1"></section>
+            <section id="nro2">Section n°2</section>
+        </div>
+        <button id="btn" type="button" onclick="e()" onmouseover="remove()" onmouseout="siguiendo()">Seguir</button>
+    </main>
+    <div class="header-phone-icon">
+        <i class="fi fi-ss-h-square"></i>
+    </div>
+
+    <div class="ui-widget">
+
+        <label for="espec">Buscar especialidades JS</label>
+        <input type="search" id="espec" list="especialidades" name="especialidades">
+        <datalist id="especialidades">
+        </datalist>
+
+    </div>
+
+    <br>
+    <div class="ui-widget">
+        <label for="espec">Buscar especialidades jquery</label>
+        <input type="search" id="especi" name="especialidades">
+        <input type="texts" id="nombre" placeholder="Ingresar nombre">
+    </div>
+
+    <div class="addcart">
+        <div class="flex">
+        <button class="btn iconos" onclick="restar()">remove</button>
+        <i id="target"></i>
+        <button id="sumar" class="btn iconos" onclick="sumar()">add</button></div>
+      
+        <div id="mesg"></div>
+        
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/action.js"></script>
+    <script src="js/autocomp.js"></script>
+
+
+
+</body>
+
+
+
+</html>

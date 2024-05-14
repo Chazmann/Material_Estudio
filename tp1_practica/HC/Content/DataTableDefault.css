@@ -1,0 +1,32 @@
+﻿ 
+/* Data Table Header checkbox */
+.DTHSel{
+    text-align:center;
+    width:5%;
+}
+
+    .DTHSel input[type="checkbox"] {
+        margin-left:15px!important
+    }
+
+    .DTHSel table.dataTable td.select-checkbox:before, table.dataTable th.select-checkbox:before {
+        content: ' ';
+        margin-top: -0px;
+        margin-left: -0px;
+        border: 0px solid black;
+        border-radius: 3px;
+    }
+
+.DTHButtons{
+    text-align:right;
+    width:4%
+}
+
+
+tableTD > table.dataTable tbody tr.selected, table.dataTable tbody th.selected, table.dataTable tbody td.selected {
+    color:#000000 !important
+}
+
+tableTD > table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
+    background-color:#f9f9f9 !important
+}
