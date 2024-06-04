@@ -5,6 +5,7 @@
 }
 
 body {
+    height: 100vh;
     display: grid;
     place-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -198,3 +199,16 @@ height: 0!important;}
     }
     
 }
+
+.popup{
+    position: absolute;
+    display: none;
+    height: 50%;
+    width: 60%;
+    background-color: #ffffff;
+    box-shadow: 0 0 1500px 1500px rgba(0, 0, 0, 0.386);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+
+    }
+

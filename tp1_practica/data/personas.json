@@ -1,0 +1,83 @@
+[
+   {
+      "nombre": "Leandro E. Chazarreta",
+      "edad": "37",
+      "dni": "31698157",
+      "profesion": "Diseñador",
+      "estudios": "Diseñador Gráfico",
+      "foto": "https://randomuser.me/api/portraits/men/73.jpg",
+      "obs": "FrontEnd Dev"
+    },
+    {
+      "nombre": "Antonela Pucheta",
+      "edad": "38",
+      "dni": "31181312",
+      "profesion": "Auditora de Calidad",
+      "estudios": "Nutricionista",
+      "foto": "https://randomuser.me/api/portraits/women/30.jpg",
+      "obs": "Sin observaciones"
+    },
+    {
+      "nombre": "Juan Pablo Salleras",
+      "edad": "39",
+      "dni": "30495991",
+      "profesion": "Programador",
+      "estudios": "Analista de Sistemas",
+      "foto": "https://randomuser.me/api/portraits/men/43.jpg",
+      "obs": "Desarrollador FullStack"
+    },
+    {
+      "nombre": "Martin Nazarre",
+      "edad": "38",
+      "dni": "31630423",
+      "profesion": "Programador",
+      "estudios": "Licenciado en Sistemas",
+      "foto": "https://randomuser.me/api/portraits/men/22.jpg",
+      "obs": "Fullstack Dev"
+    },
+    {
+      "nombre": "Tio Nacho",
+      "edad": "38",
+      "dni": "31630423",
+      "profesion": "Programador",
+      "estudios": "Licenciado en Sistemas",
+      "foto": "https://randomuser.me/api/portraits/men/6.jpg",
+      "obs": "Fullstack Dev"
+    },
+    {
+      "nombre": "Juan Pablo Salleras",
+      "edad": "39",
+      "dni": "30638825",
+      "profesion": "Programador",
+      "estudios": "Analista de Sistemas",
+      "foto": "https://randomuser.me/api/portraits/men/43.jpg",
+      "obs": "Desarrollador FullStack"
+    },
+    {
+      "nombre": "sMartin Nazarre",
+      "edad": "38",
+      "dni": "31630423",
+      "profesion": "Programador",
+      "estudios": "Licenciado en Sistemas",
+      "foto": "https://randomuser.me/api/portraits/men/51.jpg",
+      "obs": "Fullstack Dev"
+    },
+    {
+      "nombre": "Martin Nazarre",
+      "edad": "38",
+      "dni": "31630423",
+      "profesion": "Programador",
+      "estudios": "Licenciado en Sistemas",
+      "foto": "https://randomuser.me/api/portraits/men/19.jpg",
+      "obs": "Fullstack Dev"
+    },
+    {
+      "nombre": "Martin Nazarre",
+      "edad": "38",
+      "dni": "31630423",
+      "profesion": "Programador",
+      "estudios": "Licenciado en Sistemas",
+      "foto": "https://randomuser.me/api/portraits/men/81.jpg",
+      "obs": "Fullstack Dev"
+    }
+  ]

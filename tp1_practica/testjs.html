@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jugando con el Js DOM</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="material-icons.css">
     <link rel="stylesheet" href="stail.css">
 </head>
@@ -43,13 +43,31 @@
 
     <div class="addcart">
         <div class="flex">
-        <button class="btn iconos" onclick="restar()">remove</button>
-        <i id="target"></i>
-        <button id="sumar" class="btn iconos" onclick="sumar()">add</button></div>
-      
+            <button id="restar" class="btn iconos" onclick="restar()">remove</button>
+            <i id="target"></i>
+            <button id="sumar" class="btn iconos" onclick="sumar()">add</button>
+        </div>
+
         <div id="mesg"></div>
-        
+
     </div>
+
+    <button class="trigger">Abrir Modal</button>
+    <button class="trigger" >2do boton</button>
+
+    <div class="popup" name="modal1">
+        asdfas
+        <button class="btnclose" for="modal">close</button>
+    </div>
+
+    <div class="popup" name="modal2">
+    Fiumba
+        <button class="btnclose" for="modal">close</button>
+    </div>
+
+
+    <ul id="lista"></ul>
+
 
 
 
@@ -60,6 +78,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="js/action.js"></script>
     <script src="js/autocomp.js"></script>
+    <script src="js/fetch.js"></script>
 
 
 
