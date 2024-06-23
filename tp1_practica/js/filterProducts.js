@@ -1,8 +1,7 @@
-// script.js
-
-document.addEventListener("DOMContentLoaded", () => {
-  const criterios = {};
-
+document.addEventListener('DOMContentLoaded', () => {
+  const criterios = {
+    nombrePrenda: ''
+  };
   // Lista de productos obtenida del JSON
   const productos = [
     {
@@ -57,19 +56,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Función para mostrar los productos
   function mostrarProductos(productos) {
-    const productList = document.getElementById("productList");
-    const errorMessage = document.getElementById("errorMessage");
-    productList.innerHTML = ""; // Limpiar la lista de productos
+    const productList = document.getElementById('productList');
+    const errorMessage = document.getElementById('errorMessage');
+    productList.innerHTML = ''; // Limpiar la lista de productos
 
     if (productos.length === 0) {
-      errorMessage.style.display = "block";
+      errorMessage.style.display = 'block';
     } else {
-      errorMessage.style.display = "none";
-      productos.forEach((producto) => {
-        const productCard = document.createElement("div");
-        productCard.className = "product-card";
+      errorMessage.style.display = 'none';
+      productos.forEach(producto => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
         productCard.innerHTML = `
-          <div class="img"><img src="${producto.url}"></div>
+         <div class="img"><img src="${producto.url}"></div>
           <div class="info">
           <h4>${producto.nombrePrenda}</h4>
           <p>Color: ${producto.color}</p>
@@ -84,36 +83,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Función para capturar las opciones seleccionadas
+  //cb es CheckBox
   function capturarOpciones() {
-    criterios.color = Array.from(
-      document.querySelectorAll('input[name="color"]:checked')
-    ).map((chequeado) => chequeado.value);
-    criterios.tipoTela = Array.from(
-      document.querySelectorAll('input[name="tipoTela"]:checked')
-    ).map((chequeado) => chequeado.value);
-    criterios.talles = Array.from(
-      document.querySelectorAll('input[name="talles"]:checked')
-    ).map((chequeado) => chequeado.value);
+    criterios.color = Array.from(document.querySelectorAll('input[name="color"]:checked')).map(cb => cb.value);
+    criterios.tipoTela = Array.from(document.querySelectorAll('input[name="tipoTela"]:checked')).map(cb => cb.value);
+    criterios.talles = Array.from(document.querySelectorAll('input[name="talles"]:checked')).map(cb => cb.value);
+    criterios.nombrePrenda = document.getElementById('searchInput').value.toLowerCase();
   }
 
   // Filtrar productos basado en los criterios seleccionados
   function filtrarProductosMultiple(productos, criterios) {
-    return productos.filter(
-      (producto) =>
-        (criterios.color.length === 0 ||
-          criterios.color.includes(producto.color)) &&
-        (criterios.tipoTela.length === 0 ||
-          criterios.tipoTela.includes(producto.tipoTela)) &&
-        (criterios.talles.length === 0 ||
-          producto.talles.some((talle) => criterios.talles.includes(talle)))
+    return productos.filter(producto => 
+      (criterios.nombrePrenda === '' || producto.nombrePrenda.toLowerCase().includes(criterios.nombrePrenda)) &&
+      (criterios.color.length === 0 || criterios.color.includes(producto.color)) &&
+      (criterios.tipoTela.length === 0 || criterios.tipoTela.includes(producto.tipoTela)) &&
+      (criterios.talles.length === 0 || producto.talles.some(talle => criterios.talles.includes(talle)))
     );
   }
 
   // Función para limpiar los filtros
   function limpiarFiltros() {
-    document
-      .querySelectorAll('input[type="checkbox"]')
-      .forEach((chequeado) => (chequeado.checked = false));
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.getElementById('searchInput').value = '';
     mostrarProductos(productos); // Mostrar todos los productos
   }
 
@@ -121,14 +112,21 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarProductos(productos);
 
   // Agregar evento de clic al botón de filtrar
-  document.getElementById("filtrarBtn").addEventListener("click", () => {
+  document.getElementById('filtrarBtn').addEventListener('click', () => {
     capturarOpciones();
     const productosFiltrados = filtrarProductosMultiple(productos, criterios);
     mostrarProductos(productosFiltrados);
   });
 
   // Agregar evento de clic al botón de limpiar filtros
-  document.getElementById("limpiarBtn").addEventListener("click", () => {
+  document.getElementById('limpiarBtn').addEventListener('click', () => {
     limpiarFiltros();
+  });
+
+  // Agregar evento de input al campo de búsqueda
+  document.getElementById('searchInput').addEventListener('input', () => {
+    capturarOpciones();
+    const productosFiltrados = filtrarProductosMultiple(productos, criterios);
+    mostrarProductos(productosFiltrados);
   });
 });
