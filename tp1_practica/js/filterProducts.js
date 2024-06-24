@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Función para capturar las opciones seleccionadas
   //cb es CheckBox
+
   function capturarOpciones() {
     criterios.color = Array.from(document.querySelectorAll('input[name="color"]:checked')).map(cb => cb.value);
     criterios.tipoTela = Array.from(document.querySelectorAll('input[name="tipoTela"]:checked')).map(cb => cb.value);
@@ -111,11 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mostrar todos los productos al cargar la página
   mostrarProductos(productos);
 
-  // Agregar evento de clic al botón de filtrar
-  document.getElementById('filtrarBtn').addEventListener('click', () => {
+  // Función para aplicar los filtros
+  function aplicarFiltros() {
     capturarOpciones();
     const productosFiltrados = filtrarProductosMultiple(productos, criterios);
     mostrarProductos(productosFiltrados);
+  }
+
+  // Agregar eventos de cambio a los checkboxes
+  document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', aplicarFiltros);
   });
 
   // Agregar evento de clic al botón de limpiar filtros
@@ -124,9 +130,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Agregar evento de input al campo de búsqueda
-  document.getElementById('searchInput').addEventListener('input', () => {
-    capturarOpciones();
-    const productosFiltrados = filtrarProductosMultiple(productos, criterios);
-    mostrarProductos(productosFiltrados);
-  });
+  document.getElementById('searchInput').addEventListener('input', aplicarFiltros);
 });
