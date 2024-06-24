@@ -3,7 +3,7 @@
   font-family: 'Material Icons Outlined';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
+  src: url(fonts/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
 }
 
 .iconos {
@@ -20,4 +20,5 @@
   direction: ltr;
   --webkit-font-feature-settings: 'liga';
   --webkit-font-smoothing: antialiased;
+  margin: 0px 10px;
 }
