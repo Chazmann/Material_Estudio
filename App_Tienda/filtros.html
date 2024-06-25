@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Productos</title>
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+    <header>
+        <h1>Productos para filtrar</h1>
+    </header>
+    <div class="container">
+        <aside>
+            <div><h2><u>Búsqueda personalizada</u></h2>
+                <h3>Buscar por Nombre </h3>
+                <input type="text" id="searchInput" placeholder="Buscar por nombre de prenda...">
+            </div>
+            <h3>Filtros:</h3>
+            <div class="filters">
+                <div class="filterGroup">
+                    <h3>Color</h3>
+                    <label><input type="checkbox" name="color" value="rojo"> Rojo</label>
+                    <label><input type="checkbox" name="color" value="azul"> Azul</label>
+                    <label><input type="checkbox" name="color" value="negro"> Negro</label>
+                </div>
+
+                <div class="filterGroup">
+                    <h3>Tipo de Tela</h3>
+                    <label><input type="checkbox" name="tipoTela" value="algodón"> Algodón</label>
+                    <label><input type="checkbox" name="tipoTela" value="denim"> Denim</label>
+                    <label><input type="checkbox" name="tipoTela" value="poliéster"> Poliéster</label>
+                </div>
+
+                <div class="filterGroup">
+                    <h3>Talles</h3>
+                    <label><input type="checkbox" name="talles" value="S"> S</label>
+                    <label><input type="checkbox" name="talles" value="M"> M</label>
+                    <label><input type="checkbox" name="talles" value="L"> L</label>
+                </div>
+
+                <button id="filtrarBtn"><i class="iconos">filter_alt</i>Filtrar</button>
+                <button id="limpiarBtn"><i class="iconos">filter_alt_off</i>Limpiar Filtros</button>
+            </div>
+        </aside>
+        <main>
+            <h2>Resultados</h2>
+            <div class="product-list" id="productList">
+                <!-- Acá se van a cargar las tarjetas -->
+            </div>
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <h2><div class="iconos">error</div><i>No se encontraron productos que coincidan con los filtros seleccionados.</i></h2>
+            </div>
+
+        </main>
+    </div>
+    <script src="js/filter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .product-details {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            width: 500px;
+            text-align: center;
+            background-color: gray;
+        }
+
+        .detail {
+            display: flex;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-details" id="productDetails">
+        <!-- Aquí se mostrarán los detalles del producto -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const nombrePrenda = params.get('nombrePrenda');
+            const url = params.get('url');
+            const color = params.get('color');
+            const tipoTela = params.get('tipoTela');
+            const talles = params.get('talles');
+            const género = params.get('género');
+            const precio = params.get('precio');
+            const stock = parseInt(params.get('stock'), 10);
+
+            const maxQuantity = Math.min(stock, 5);
+
+            const productDetails = document.getElementById('productDetails');
+            productDetails.innerHTML = /*html*/`
+            <div class="detail">
+                <div class="img"><img src="${url}"></div>
+                <div>  
+                    <h2>${nombrePrenda}</h2>
+                    <p>Color: ${color}</p>
+                    <p>Tipo de Tela: ${tipoTela}</p>
+                    <p>Talles: ${talles}</p>
+                    <p>Género: ${género}</p>
+                    <h3>Precio: $${precio}</h3>
+                    <h5>Stock: ${stock} unidades disponibles</h5>
+                    <hr>
+                    <div class="quantity-selector" id="quantitySelector">
+                    <label for="quantitySelect">Cantidad: </label>
+                    <select id="quantitySelect">
+                     ${Array.from({ length: maxQuantity }, (_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('')}
+                    </select>
+        </div>
+                </div>
+            </div>    
+            <br>
+            <button class="add-to-cart" id="addToCartBtn">Agregar al carrito</button>
+        </div>
+      
+      `;
+
+            document.getElementById('addToCartBtn').addEventListener('click', () => {
+                const quantity = document.getElementById('quantitySelect').value;
+                const cartItem = {
+                    nombrePrenda,
+                    color,
+                    tipoTela,
+                    talles,
+                    género,
+                    precio,
+                    stock,
+                    url,
+                    quantity
+                };
+                let total = quantity * cartItem.precio
+
+                // Guardar en el localStorage
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(cartItem);
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert(`${nombrePrenda} ha sido agregado al carrito, total: $ ${total} `);
+            });
+            console.log(localStorage.getItem('cart'))
+
+
+        });
+    </script>
+</body>
+
+</html>

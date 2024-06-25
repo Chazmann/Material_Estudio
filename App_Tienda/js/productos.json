@@ -1,0 +1,62 @@
+[
+    {
+      "nombrePrenda": "Camiseta",
+      "talles": ["S", "M", "L"],
+      "color": "rojo",
+      "tipoTela": "algodón",
+      "género": "unisex",
+      "url": "https://m.media-amazon.com/images/I/71bIyy114PL._AC_SL1500_.jpg",
+      "precio": 39.99,
+      "stock": 30
+    },
+    {
+      "nombrePrenda": "Pantalón",
+      "talles": ["M", "L"],
+      "color": "azul",
+      "tipoTela": "denim",
+      "género": "hombre",
+      "url": "https://m.media-amazon.com/images/I/71KI2MZQLeS._AC_SL1500_.jpg",
+      "precio": 39.99,
+      "stock": 30
+    },
+    {
+      "nombrePrenda": "Falda",
+      "talles": ["S", "M"],
+      "color": "negro",
+      "tipoTela": "poliéster",
+      "género": "mujer",
+      "url": "https://m.media-amazon.com/images/I/71r00O82kyL._AC_SL1500_.jpg",
+      "precio": 39.99,
+      "stock": 3
+    },
+    {
+      "nombrePrenda": "Remera Lisa",
+      "talles": ["S", "M", "L"],
+      "color": "rojo",
+      "tipoTela": "algodón",
+      "género": "unisex",
+      "url": "https://m.media-amazon.com/images/I/61Qd4houSdL._AC_SL1500_.jpg",
+      "precio": 39.99,
+      "stock": 4
+    },
+    {
+      "nombrePrenda": "Gorra",
+      "talles": ["M", "L"],
+      "color": "azul",
+      "tipoTela": "denim",
+      "género": "hombre",
+      "url": "https://m.media-amazon.com/images/I/91I33Ngvh+L._AC_SL1500_.jpg",
+      "precio": 39.99,
+      "stock": 2
+    },
+    {
+      "nombrePrenda": "Camiseta Térmica",
+      "talles": ["S", "M"],
+      "color": "negro",
+      "tipoTela": "poliéster",
+      "género": "mujer",
+      "url": "https://m.media-amazon.com/images/I/61M8eYJFQEL._AC_SL1500_.jpg",
+      "precio": 39.99,
+      "stock": 1
+    }
+  ]
